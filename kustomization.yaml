@@ -1,11 +1,3 @@
-# A helmCharts entry is what makes `kustomize build` shell out to the "helm"
-# binary. Because the attacker also passes --helm-command ./evil.sh, kustomize
-# runs ./evil.sh instead of real helm. The chart name/repo/version are never
-# actually used — evil.sh intercepts every helm call — so they can be anything.
-apiVersion: kustomize.config.k8s.io/v1beta1
-kind: Kustomization
 helmCharts:
-  - name: pwn
-    releaseName: pwn
-    version: 0.1.0
-    repo: https://example.invalid/charts
+- name: pwn
+  version: 0.0.1
